@@ -1,0 +1,470 @@
+{
+ "limit_kb": 102.0,
+ "scenarios": {
+  "one_item": {
+   "label": "1 item",
+   "items": 1,
+   "built_kb": 5.2,
+   "naive_kb": 28.1,
+   "naive_issues": [],
+   "checks": [
+    {
+     "check": "Under Gmail's 102 KB clip",
+     "detail": "5.2 KB",
+     "pass": true
+    },
+    {
+     "check": "Every template tag rendered",
+     "detail": "no {{ or {% left",
+     "pass": true
+    },
+    {
+     "check": "Greeting never blank",
+     "detail": "Hi Maya,",
+     "pass": true
+    },
+    {
+     "check": "No Shopify 'Default Title'",
+     "detail": "hidden",
+     "pass": true
+    },
+    {
+     "check": "Products capped at 3",
+     "detail": "1 shown",
+     "pass": true
+    },
+    {
+     "check": "Missing image falls back",
+     "detail": "all images present",
+     "pass": true
+    },
+    {
+     "check": "Subtotal matches the cart",
+     "detail": "$34.00 vs $34.00",
+     "pass": true
+    },
+    {
+     "check": "Images have alt and width",
+     "detail": "1 images",
+     "pass": true
+    },
+    {
+     "check": "Links are https",
+     "detail": "4 links",
+     "pass": true
+    },
+    {
+     "check": "Outlook-safe CSS",
+     "detail": "no flex, grid, or positioning",
+     "pass": true
+    },
+    {
+     "check": "Outlook button (VML)",
+     "detail": "present",
+     "pass": true
+    },
+    {
+     "check": "Preheader 40-130 chars",
+     "detail": "67 chars",
+     "pass": true
+    },
+    {
+     "check": "Dark mode support",
+     "detail": "color-scheme meta + styles",
+     "pass": true
+    }
+   ],
+   "triggers": [
+    [
+     "Cart under $75",
+     "Shows the free-shipping threshold instead"
+    ]
+   ]
+  },
+  "three_items": {
+   "label": "3 items",
+   "items": 3,
+   "built_kb": 6.8,
+   "naive_kb": 38.4,
+   "naive_issues": [
+    "'Default Title' shown"
+   ],
+   "checks": [
+    {
+     "check": "Under Gmail's 102 KB clip",
+     "detail": "6.8 KB",
+     "pass": true
+    },
+    {
+     "check": "Every template tag rendered",
+     "detail": "no {{ or {% left",
+     "pass": true
+    },
+    {
+     "check": "Greeting never blank",
+     "detail": "Hi Daniel,",
+     "pass": true
+    },
+    {
+     "check": "No Shopify 'Default Title'",
+     "detail": "hidden",
+     "pass": true
+    },
+    {
+     "check": "Products capped at 3",
+     "detail": "3 shown",
+     "pass": true
+    },
+    {
+     "check": "Missing image falls back",
+     "detail": "all images present",
+     "pass": true
+    },
+    {
+     "check": "Subtotal matches the cart",
+     "detail": "$92.00 vs $92.00",
+     "pass": true
+    },
+    {
+     "check": "Images have alt and width",
+     "detail": "3 images",
+     "pass": true
+    },
+    {
+     "check": "Links are https",
+     "detail": "4 links",
+     "pass": true
+    },
+    {
+     "check": "Outlook-safe CSS",
+     "detail": "no flex, grid, or positioning",
+     "pass": true
+    },
+    {
+     "check": "Outlook button (VML)",
+     "detail": "present",
+     "pass": true
+    },
+    {
+     "check": "Preheader 40-130 chars",
+     "detail": "67 chars",
+     "pass": true
+    },
+    {
+     "check": "Dark mode support",
+     "detail": "color-scheme meta + styles",
+     "pass": true
+    }
+   ],
+   "triggers": [
+    [
+     "Shopify 'Default Title' variant",
+     "Hidden, so customers never see it"
+    ],
+    [
+     "Cart over $75",
+     "Free-shipping line switches on"
+    ]
+   ]
+  },
+  "nine_items": {
+   "label": "9 items",
+   "items": 9,
+   "built_kb": 6.9,
+   "naive_kb": 69.2,
+   "naive_issues": [
+    "'Default Title' shown"
+   ],
+   "checks": [
+    {
+     "check": "Under Gmail's 102 KB clip",
+     "detail": "6.9 KB",
+     "pass": true
+    },
+    {
+     "check": "Every template tag rendered",
+     "detail": "no {{ or {% left",
+     "pass": true
+    },
+    {
+     "check": "Greeting never blank",
+     "detail": "Hi there,",
+     "pass": true
+    },
+    {
+     "check": "No Shopify 'Default Title'",
+     "detail": "hidden",
+     "pass": true
+    },
+    {
+     "check": "Products capped at 3",
+     "detail": "3 shown, '+6 more' row",
+     "pass": true
+    },
+    {
+     "check": "Missing image falls back",
+     "detail": "all images present",
+     "pass": true
+    },
+    {
+     "check": "Subtotal matches the cart",
+     "detail": "$318.00 vs $318.00",
+     "pass": true
+    },
+    {
+     "check": "Images have alt and width",
+     "detail": "3 images",
+     "pass": true
+    },
+    {
+     "check": "Links are https",
+     "detail": "4 links",
+     "pass": true
+    },
+    {
+     "check": "Outlook-safe CSS",
+     "detail": "no flex, grid, or positioning",
+     "pass": true
+    },
+    {
+     "check": "Outlook button (VML)",
+     "detail": "present",
+     "pass": true
+    },
+    {
+     "check": "Preheader 40-130 chars",
+     "detail": "67 chars",
+     "pass": true
+    },
+    {
+     "check": "Dark mode support",
+     "detail": "color-scheme meta + styles",
+     "pass": true
+    }
+   ],
+   "triggers": [
+    [
+     "No first name on the profile",
+     "Greets 'Hi there' instead of 'Hi ,'"
+    ],
+    [
+     "Shopify 'Default Title' variant",
+     "Hidden, so customers never see it"
+    ],
+    [
+     "9 items in the cart",
+     "Shows 3, folds the rest into '+6 more'"
+    ],
+    [
+     "Cart over $75",
+     "Free-shipping line switches on"
+    ]
+   ]
+  },
+  "missing_data": {
+   "label": "Missing data",
+   "items": 2,
+   "built_kb": 6.0,
+   "naive_kb": 33.3,
+   "naive_issues": [
+    "blank greeting",
+    "'Default Title' shown",
+    "broken image"
+   ],
+   "checks": [
+    {
+     "check": "Under Gmail's 102 KB clip",
+     "detail": "6.0 KB",
+     "pass": true
+    },
+    {
+     "check": "Every template tag rendered",
+     "detail": "no {{ or {% left",
+     "pass": true
+    },
+    {
+     "check": "Greeting never blank",
+     "detail": "Hi there,",
+     "pass": true
+    },
+    {
+     "check": "No Shopify 'Default Title'",
+     "detail": "hidden",
+     "pass": true
+    },
+    {
+     "check": "Products capped at 3",
+     "detail": "2 shown",
+     "pass": true
+    },
+    {
+     "check": "Missing image falls back",
+     "detail": "placeholder used",
+     "pass": true
+    },
+    {
+     "check": "Subtotal matches the cart",
+     "detail": "$46.00 vs $46.00",
+     "pass": true
+    },
+    {
+     "check": "Images have alt and width",
+     "detail": "2 images",
+     "pass": true
+    },
+    {
+     "check": "Links are https",
+     "detail": "4 links",
+     "pass": true
+    },
+    {
+     "check": "Outlook-safe CSS",
+     "detail": "no flex, grid, or positioning",
+     "pass": true
+    },
+    {
+     "check": "Outlook button (VML)",
+     "detail": "present",
+     "pass": true
+    },
+    {
+     "check": "Preheader 40-130 chars",
+     "detail": "67 chars",
+     "pass": true
+    },
+    {
+     "check": "Dark mode support",
+     "detail": "color-scheme meta + styles",
+     "pass": true
+    }
+   ],
+   "triggers": [
+    [
+     "No first name on the profile",
+     "Greets 'Hi there' instead of 'Hi ,'"
+    ],
+    [
+     "Shopify 'Default Title' variant",
+     "Hidden, so customers never see it"
+    ],
+    [
+     "Product with no image",
+     "A placeholder keeps the layout intact"
+    ],
+    [
+     "Very long product name",
+     "Shortened so it can't break the row"
+    ],
+    [
+     "Cart under $75",
+     "Shows the free-shipping threshold instead"
+    ]
+   ]
+  }
+ },
+ "all_pass": true,
+ "sweep": [
+  {
+   "items": 1,
+   "built_kb": 5.2,
+   "naive_kb": 28.1
+  },
+  {
+   "items": 2,
+   "built_kb": 5.9,
+   "naive_kb": 33.3
+  },
+  {
+   "items": 3,
+   "built_kb": 6.7,
+   "naive_kb": 38.4
+  },
+  {
+   "items": 4,
+   "built_kb": 6.9,
+   "naive_kb": 43.5
+  },
+  {
+   "items": 5,
+   "built_kb": 6.9,
+   "naive_kb": 48.7
+  },
+  {
+   "items": 6,
+   "built_kb": 6.9,
+   "naive_kb": 53.8
+  },
+  {
+   "items": 7,
+   "built_kb": 6.9,
+   "naive_kb": 58.9
+  },
+  {
+   "items": 8,
+   "built_kb": 6.9,
+   "naive_kb": 64.1
+  },
+  {
+   "items": 9,
+   "built_kb": 6.9,
+   "naive_kb": 69.2
+  },
+  {
+   "items": 10,
+   "built_kb": 6.9,
+   "naive_kb": 74.3
+  },
+  {
+   "items": 11,
+   "built_kb": 6.9,
+   "naive_kb": 79.5
+  },
+  {
+   "items": 12,
+   "built_kb": 6.9,
+   "naive_kb": 84.6
+  },
+  {
+   "items": 13,
+   "built_kb": 6.9,
+   "naive_kb": 89.7
+  },
+  {
+   "items": 14,
+   "built_kb": 6.9,
+   "naive_kb": 94.9
+  },
+  {
+   "items": 15,
+   "built_kb": 6.9,
+   "naive_kb": 100.0
+  },
+  {
+   "items": 16,
+   "built_kb": 6.9,
+   "naive_kb": 105.1
+  },
+  {
+   "items": 17,
+   "built_kb": 6.9,
+   "naive_kb": 110.3
+  },
+  {
+   "items": 18,
+   "built_kb": 6.9,
+   "naive_kb": 115.4
+  },
+  {
+   "items": 19,
+   "built_kb": 6.9,
+   "naive_kb": 120.5
+  },
+  {
+   "items": 20,
+   "built_kb": 6.9,
+   "naive_kb": 125.7
+  }
+ ],
+ "naive_clips_at_items": 16,
+ "naive_kb_per_item": 5.1
+}

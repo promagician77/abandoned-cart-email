@@ -1,0 +1,21 @@
+{
+ "one_item": {"label": "1 item", "person": {"first_name": "Maya"}, "event": {"$value": 34.0, "extra": {"checkout_url": "https://fernhill.example/checkouts/c1?key=a81f", "line_items": [
+   {"quantity": 1, "line_price": 34.0, "product": {"title": "Fig & Cedar Candle", "variant": {"title": "8 oz"}, "images": [{"src": "/img/candle.jpg"}]}}]}}},
+ "three_items": {"label": "3 items", "person": {"first_name": "Daniel"}, "event": {"$value": 92.0, "extra": {"checkout_url": "https://fernhill.example/checkouts/c2?key=77b0", "line_items": [
+   {"quantity": 2, "line_price": 36.0, "product": {"title": "Stoneware Mug", "variant": {"title": "Default Title"}, "images": [{"src": "/img/mug.jpg"}]}},
+   {"quantity": 1, "line_price": 28.0, "product": {"title": "Canvas Market Tote", "variant": {"title": "Natural"}, "images": [{"src": "/img/tote.jpg"}]}},
+   {"quantity": 1, "line_price": 28.0, "product": {"title": "Terracotta Planter", "variant": {"title": "Medium"}, "images": [{"src": "/img/planter.jpg"}]}}]}}},
+ "nine_items": {"label": "9 items", "person": {"first_name": null}, "event": {"$value": 318.0, "extra": {"checkout_url": "https://fernhill.example/checkouts/c3?key=0e2c", "line_items": [
+   {"quantity": 1, "line_price": 64.0, "product": {"title": "Wool Throw Blanket", "variant": {"title": "Rust"}, "images": [{"src": "/img/throw.jpg"}]}},
+   {"quantity": 1, "line_price": 42.0, "product": {"title": "Ceramic Bud Vase", "variant": {"title": "Default Title"}, "images": [{"src": "/img/vase.jpg"}]}},
+   {"quantity": 3, "line_price": 36.0, "product": {"title": "Oat Milk Soap", "variant": {"title": "Default Title"}, "images": [{"src": "/img/soap.jpg"}]}},
+   {"quantity": 1, "line_price": 18.0, "product": {"title": "Linen Notebook", "variant": {"title": "Forest"}, "images": [{"src": "/img/notebook.jpg"}]}},
+   {"quantity": 1, "line_price": 38.0, "product": {"title": "Reed Diffuser", "variant": {"title": "Vetiver"}, "images": [{"src": "/img/diffuser.jpg"}]}},
+   {"quantity": 1, "line_price": 34.0, "product": {"title": "Fig & Cedar Candle", "variant": {"title": "8 oz"}, "images": [{"src": "/img/candle.jpg"}]}},
+   {"quantity": 1, "line_price": 18.0, "product": {"title": "Stoneware Mug", "variant": {"title": "Default Title"}, "images": [{"src": "/img/mug.jpg"}]}},
+   {"quantity": 1, "line_price": 28.0, "product": {"title": "Canvas Market Tote", "variant": {"title": "Natural"}, "images": [{"src": "/img/tote.jpg"}]}},
+   {"quantity": 1, "line_price": 40.0, "product": {"title": "Terracotta Planter", "variant": {"title": "Large"}, "images": [{"src": "/img/planter.jpg"}]}}]}}},
+ "missing_data": {"label": "Missing data", "person": {"first_name": ""}, "event": {"$value": 46.0, "extra": {"checkout_url": "https://fernhill.example/checkouts/c4?key=5d19", "line_items": [
+   {"quantity": 1, "line_price": 28.0, "product": {"title": "Hand-Thrown Speckled Stoneware Serving Bowl with Reactive Glaze, Large", "variant": {"title": "Default Title"}, "images": [{"src": "/img/vase.jpg"}]}},
+   {"quantity": 1, "line_price": 18.0, "product": {"title": "Linen Notebook", "variant": {"title": "Forest"}, "images": []}}]}}}
+}

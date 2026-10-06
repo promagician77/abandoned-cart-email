@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="robots" content="noindex, nofollow">
+<title>Abandoned cart flow - working draft</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%230F766E'/><path d='M14 22h36v22H14z' fill='none' stroke='white' stroke-width='5'/><path d='M14 22l18 13 18-13' fill='none' stroke='white' stroke-width='5'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap"><h1>Abandoned cart email, built and tested</h1><p>A working draft for your post, by Lucas. Real Klaviyo template syntax, rendered against real cart scenarios.</p></div>
+  <nav class="wrap tabs" role="tablist" aria-label="Sections">
+    <button role="tab" aria-selected="true" data-t="preview">Live preview</button>
+    <button role="tab" aria-selected="false" data-t="ba">Before and after</button>
+    <button role="tab" aria-selected="false" data-t="size">Size vs Gmail</button>
+    <button role="tab" aria-selected="false" data-t="code">Klaviyo code</button>
+    <button role="tab" aria-selected="false" data-t="qa">QA report</button>
+  </nav>
+</header>
+<main class="wrap">
+  <div class="bar">
+    <div class="seg" role="radiogroup" aria-label="Cart scenario" id="scenarios"></div>
+    <div class="seg" role="radiogroup" aria-label="Screen width" id="devices">
+      <button role="radio" aria-checked="true" data-w="600">Desktop</button><button role="radio" aria-checked="false" data-w="375">Mobile</button>
+    </div>
+  </div>
+
+  <section id="preview" class="panel">
+    <div class="pv">
+      <div class="frame"><iframe id="f-main" title="Email preview"></iframe></div>
+      <aside class="side">
+        <h2>What this cart triggered</h2>
+        <ul class="trig" id="trig"></ul>
+        <p class="sizeline" id="sizeline"></p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="ba" class="panel" hidden>
+    <div class="two">
+      <div><h2 class="lbl bad">Typical editor-built template</h2><p class="cap" id="ba-bad"></p><div class="frame"><iframe id="f-naive" title="Editor-style version"></iframe></div></div>
+      <div><h2 class="lbl good">Built and tested</h2><p class="cap" id="ba-good"></p><div class="frame"><iframe id="f-built" title="Built version"></iframe></div></div>
+    </div>
+  </section>
+
+  <section id="size" class="panel" hidden>
+    <h2>Email size as the cart grows</h2>
+    <p class="sub" id="size-sub"></p>
+    <div class="chart"><svg id="chart" viewBox="0 0 900 360" role="img" aria-label="Email size by number of cart items"></svg></div>
+    <p class="fine">The editor-style template is modeled on typical drag-and-drop exports, where every product repeats its full styling. Your real templates may be lighter or heavier, and I'd measure them on day one.</p>
+  </section>
+
+  <section id="code" class="panel" hidden>
+    <div class="codehead"><h2>The dynamic cart module</h2><div><button class="btn" id="copy">Copy module</button> <a class="btn ghost" href="klaviyo_abandoned_cart.html.txt" download="klaviyo_abandoned_cart.html">Download full template</a></div></div>
+    <p class="sub">Paste-ready for Klaviyo. Built from 8 reusable modules that compile into one file.</p>
+    <pre class="code" id="codeblock"></pre>
+  </section>
+
+  <section id="qa" class="panel" hidden>
+    <h2>Every scenario, every check</h2>
+    <p class="sub">Run automatically on each build. Rendering in Outlook and Gmail apps still gets a final pass in Litmus or Email on Acid before handoff.</p>
+    <div class="tw"><table class="qa" id="qatable"></table></div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
